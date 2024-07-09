@@ -10,5 +10,12 @@
     "Register": "Register",
     "Continue": "Continue",
     "Password": "Password",
-    "Email": "Email"
+    "Email": "Email",
+    "Already have an account?": "Already have an account?",
+    "Phone": "Phone",
+    "Country": "Country",
+    "Russia": "Russia",
+    "England": "England",
+    "City": "City",
+    "Confirm password": "Confirm password"
 }

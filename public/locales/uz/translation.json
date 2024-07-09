@@ -10,5 +10,12 @@
     "Register": "Ro'yxatdan o'tmoq",
     "Continue": "Davom etmoq",
     "Password": "Parol",
-    "Email": "Elektron pochta"
+    "Email": "Elektron pochta",
+    "Already have an account?": "Allaqachon akkaunt bormi?",
+    "Phone": "Telefon",
+    "Country": "Davlat",
+    "Russia": "Rassiya",
+    "England": "Angilya",
+    "City": "Shahar",
+    "Confirm password": "Parolni tasdiqlash"
 }

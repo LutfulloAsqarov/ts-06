@@ -4,6 +4,7 @@ import * as Yup from "yup";
 import "./register.scss";
 import logo from "../../assets/logo.svg";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const initialState = {
     email: "",
@@ -27,14 +28,15 @@ const SignupSchema = Yup.object().shape({
 });
 
 const Register = () => {
+    const { t, i18n } = useTranslation();
     return (
         <div className="form">
             <div>
                 <img src={logo} alt="" />
             </div>
-            <h1>Welcome to ByTrend!</h1>
+            <h1>{t("title")}</h1>
             <p className="request">
-                Already have an account?{" "}
+                {t("Already have an account?")}
                 <span>
                     <Link to={"/login"}>Log in</Link>
                 </span>
@@ -50,37 +52,37 @@ const Register = () => {
                 {({ errors, touched }) => (
                     <Form className="form__items">
                         <div className="form__item">
-                            <label htmlFor="email">Email</label>
+                            <label htmlFor="email">{t("Email")}</label>
                             <Field
                                 name="email"
                                 type="email"
                                 className={`inp ${
                                     errors.email && touched.email ? "error" : ""
                                 }`}
-                                placeholder="Email"
+                                placeholder={t("Email")}
                             />
                         </div>
                         <div className="form__item">
-                            <label htmlFor="phone">Phone</label>
+                            <label htmlFor="phone">{t("Phone")}</label>
                             <Field
                                 name="phone"
                                 // type="string"
                                 className={`inp ${
                                     errors.phone && touched.phone ? "error" : ""
                                 }`}
-                                placeholder="Phone"
+                                placeholder={t("Phone")}
                             />
                         </div>
                         <div className="country">
                             <div className="form__item">
-                                <label htmlFor="country">Country</label>
+                                <label htmlFor="country">{t("Country")}</label>
                                 <select className="inp" name="" id="">
-                                    <option value="">Russia</option>
-                                    <option value="">England</option>
+                                    <option value="">{t("Russia")}</option>
+                                    <option value="">{t("England")}</option>
                                 </select>
                             </div>
                             <div className="form__item">
-                                <label htmlFor="city">City</label>
+                                <label htmlFor="city">{t("City")}</label>
                                 <Field
                                     name="city"
                                     type="text"
@@ -89,12 +91,12 @@ const Register = () => {
                                             ? "error"
                                             : ""
                                     }`}
-                                    placeholder="City"
+                                    placeholder={t("City")}
                                 />
                             </div>
                         </div>
                         <div className="form__item">
-                            <label htmlFor="password">Password</label>
+                            <label htmlFor="password">{t("Password")}</label>
                             <Field
                                 name="password"
                                 type="password"
@@ -104,12 +106,12 @@ const Register = () => {
                                         ? "error"
                                         : ""
                                 }`}
-                                placeholder="Password"
+                                placeholder={t("Password")}
                             />
                         </div>
                         <div className="form__item">
                             <label htmlFor="ConfirmPassword">
-                                Confirm password
+                                {t("Confirm password")}
                             </label>
                             <Field
                                 name="ConfirmPassword"
@@ -121,11 +123,11 @@ const Register = () => {
                                         ? "error"
                                         : ""
                                 }`}
-                                placeholder="Confirm password"
+                                placeholder={t("Confirm password")}
                             />
                         </div>
 
-                        <button type="submit">Register</button>
+                        <button type="submit">{t("Register")}</button>
                     </Form>
                 )}
             </Formik>
